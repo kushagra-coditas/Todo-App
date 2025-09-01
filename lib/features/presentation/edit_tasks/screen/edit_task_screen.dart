@@ -1,3 +1,4 @@
+import 'package:todo_app/core/constants/string_constants.dart';
 import 'package:todo_app/features/presentation/bloc/to_do_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/features/presentation/widgets/edit_tasks_body_widget.dart';
@@ -35,7 +36,7 @@ class EditTasks extends StatelessWidget {
       Navigator.pop(context);
     }
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: Text('Edit Task')),
+      appBar: AppBar(centerTitle: true, title: Text(EditTaskScreenConstants.appBarTitle)),
       body: Padding(
         padding: EdgeInsets.all(8.0),
         child: EditTasksBody(

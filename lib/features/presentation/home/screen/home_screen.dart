@@ -1,3 +1,4 @@
+import 'package:todo_app/core/constants/string_constants.dart';
 import 'package:todo_app/features/presentation/bloc/to_do_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/features/presentation/add_tasks/screen/add_task_screen.dart';
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Tasks'),
+          title: Text(HomeScreenConstants.appBarTitle),
 
           actions: [
             IconButton(
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: BlocBuilder<TodoBloc, TodoState>(
           builder: (context, state) {
             if (state.tasks.isEmpty) {
-              return const Center(child: Text("No tasks yet"));
+              return const Center(child: Text(HomeScreenConstants.noTasks));
             }
             return ListView.separated(
               padding: const EdgeInsets.only(right: 80),

@@ -1,3 +1,4 @@
+import 'package:todo_app/core/constants/string_constants.dart';
 import 'package:todo_app/features/presentation/bloc/to_do_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/features/presentation/widgets/add_tasks_body_widget.dart';
@@ -36,7 +37,7 @@ class AddTasksState extends State<AddTasks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: const Text('New Task')),
+      appBar: AppBar(centerTitle: true, title: const Text(AddTaskScreenConstants.appBarTitle)),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: AddTasksBody(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/core/constants/string_constants.dart';
 import 'package:todo_app/features/presentation/widgets/custom_textfield_widget.dart';
 import 'package:todo_app/features/presentation/widgets/title_text_widget.dart';
 
@@ -21,13 +22,13 @@ class AddTasksBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TitleText(text: 'Task Name'),
+        TitleText(text: CommonStringConstants.titleText1),
         CustomTextField(controller: titleController, padding: 5),
         const SizedBox(height: 15),
-        TitleText(text: 'Description'),
+        TitleText(text: CommonStringConstants.titleText2),
         CustomTextField(controller: descriptionController, padding: 75),
         const SizedBox(height: 15),
-        TitleText(text: 'Due Date'),
+        TitleText(text: CommonStringConstants.titleText3),
         CustomTextField(controller: dueDateController, padding: 15),
         const SizedBox(height: 20),
         SizedBox(
@@ -37,7 +38,7 @@ class AddTasksBody extends StatelessWidget {
             onPressed: onSave,
             backgroundColor: const Color.fromARGB(255, 70, 133, 241),
             child: const Text(
-              'Save Task',
+              CommonStringConstants.saveTaskButton,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w800,
