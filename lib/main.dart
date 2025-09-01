@@ -1,6 +1,6 @@
-import 'package:todo_app/bloc/to_do_bloc.dart';
+import 'package:todo_app/features/presentation/bloc/to_do_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/home_screen.dart';
+import 'package:todo_app/features/presentation/home/screen/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
